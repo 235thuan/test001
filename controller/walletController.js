@@ -44,8 +44,7 @@ exports.createWallet = async function (req, res) {
         result: {},
     }
     try {
-
-        jsonSend.result = await walletService.createWallet(Users.userId);
+        jsonSend.result = await walletService.createWallet(address);
         jsonSend.message='Success Create Wallet';
         jsonSend.requestResult= true;
         res.send(jsonSend);
